@@ -662,7 +662,7 @@ orderFormSubmit.addEventListener("click", function(event) {
     subject: userSubject.value,
   };
 
-  fetch("https://bewildered-tan-tux.cyclic.cloud/send-data-monifa", {
+  fetch("", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -801,7 +801,7 @@ orderFormSubmit.addEventListener("click", function(event) {
                 duration: 800,
                 delay: 100
             });
-        }, 1000); // 30 seconds delay
+        }, 3000); // 30 seconds delay
     });
 	
 	
