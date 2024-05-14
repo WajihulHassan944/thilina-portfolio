@@ -94,7 +94,7 @@
             Github
           </button></div>
      -->
-            <div id="socials-container" >
+            <div id="socials-container" data-aos="fade-up">
 			
     
  <div class="iconsssWrap"> <i class="fab fa-linkedin iconsss myCustomButton" ></i></div>
@@ -172,7 +172,7 @@
         
 		
 		<div class="serviceWrapForItems">
-    <div class="service-item">
+    <div class="service-item" data-aos="zoom-in">
         <div class="item">
             <div class="wrapi">   <i class="fas fa-lightbulb"></i></div> <!-- Icon for Concept Development -->
             <h4>Concept Development</h4>
@@ -182,7 +182,7 @@
         </div>
     </div>
 
-    <div class="service-item">
+    <div class="service-item" data-aos="zoom-in">
         <div class="item">
            <div class="wrapi">    <i class="fas fa-pencil-ruler"></i></div> <!-- Icon for CAD Drafting -->
             <h4>CAD Drafting </h4>
@@ -192,7 +192,7 @@
         </div>
     </div>
 
-    <div class="service-item">
+    <div class="service-item" data-aos="zoom-in">
         <div class="item">
           <div class="wrapi">  <i class="fas fa-map-marked-alt"></i> </div>
             <h4>Permit drawing preparation</h4>
@@ -208,7 +208,7 @@
 <style>
 	.serviceWrapForItems{
 		display:flex;
-		gap:30px;
+		gap:20px;
 		justify-content:center;
 		align-items:center;
 		margin-top:50px;
@@ -219,10 +219,11 @@
 		align-items:center;
 		flex-direction:column;
 		text-align:center;
-    background-color: #f9f9f9;
-	width:350px;
-	padding:60px 30px;
-	 box-shadow: 0 0 10px #cccccc;
+    background-color: #f3f3f3;
+	border-bottom: 5px solid #00a01d;
+	width:340px;
+	border-radius: 10px;
+	padding:44px 40px;
 	}
 	.serviceWrapForItems .service-item .item h4{
 	margin:15px 0;	
@@ -244,6 +245,19 @@
 		font-size:23px;
 		border-radius:50%;
 	}
+	
+@media (max-width: 768px){
+	.serviceWrapForItems{
+		gap:20px;
+		margin-top:50px;
+		flex-direction:column;
+	}
+	.serviceWrapForItems .service-item .item{
+		width:270px;
+		padding:20px;
+	 }
+	
+}
 </style>
 
 
@@ -456,9 +470,7 @@ i{
 
 
 
-
-
-<section id="projects"  class="testimonials-section" style="margin-top:200px;  padding-top:50px; height:70vh; margin-bottom:70px; ">
+<section id="testimonials projects "  class="testimonials-section" >
         <p class="section__text__p1 section__textsss" style="color:#00a01d;">Browse My Testimonials</p>
         <h1 class="title">Testimonials</h1>
         <div class="experience-details-container">
@@ -503,6 +515,13 @@ i{
 
 <style>
 
+	.testimonials-section{
+		margin-top:200px;  
+		padding-top:50px; 
+		height:70vh; 
+		margin-bottom:70px; 
+	}
+	
 .projects__content__custom{
 	display:flex;
 	justify-content:center;
@@ -543,6 +562,27 @@ i{
 	color:#14a800;;
 	font-weight:400;
 }
+
+
+@media (max-width: 768px){
+	
+	.testimonials-section{
+		margin-top:10px;  
+		padding-top:20px; 
+		height:70vh; 
+		margin-bottom:70px; 
+	}
+	
+.projects__content__custom{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	width:270px;
+	padding-left:0;
+}
+
+}
 </style>
 
 
@@ -562,7 +602,7 @@ i{
            <form id="contactForm">
     <div class="form">
         <div class="form-txt" data-aos="zoom-in">
-          <h1 class="oneone" style="margin-top:50px;">Your Project,<br> My Commitment!</h1>
+          <h1 class="oneone contactheading">Your Project,<br> My Commitment!</h1>
 <span class="oneone">Each project demands unique attention. I am dedicated to understanding and fulfilling your specific requirements, and crafting architectural 
 masterpieces that exceed your expectations. Let's discuss your project in-depth and embark on a journey to realize your architectural dreams. Message me today to start
  shaping the future of your architectural aspirations!</span>
@@ -589,7 +629,18 @@ masterpieces that exceed your expectations. Let's discuss your project in-depth 
 	
 
 <style>
-
+.contactheading{
+	margin-top:50px;
+}
+@media (max-width: 768px){
+	.form .form-txt h1{
+		margin-top:0;
+		font-size:20px;
+	}
+	#contact{
+		margin-bottom:200px;
+	}
+}
 .loading-container {
   display: none;
   position: fixed;
