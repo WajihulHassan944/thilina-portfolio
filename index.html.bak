@@ -837,20 +837,6 @@ masterpieces that exceed your expectations. Let's discuss your project in-depth 
     </section>
 	
 	
-<script>
-document.getElementById('newOrderForm').addEventListener('click', function() {
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-    var subject = 'Message from ' + name;
-    
-    var mailtoLink = 'https://mail.google.com/mail/?view=cm&fs=1&to=lmtdhananjaya@gmail.com&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
-    
-    window.open(mailtoLink, '_blank');
-});
-</script>
-
-	
 	
 
 <style>
@@ -909,7 +895,6 @@ document.getElementById('newOrderForm').addEventListener('click', function() {
   <div class="loading-spinner"></div>
 </div>
 
-<!--
 <script>
 
 var userName = document.getElementById("name");
@@ -967,9 +952,6 @@ orderFormSubmit.addEventListener("click", function(event) {
 
 
 
--->	
-	
-	
 	
 	
 	
@@ -1036,32 +1018,34 @@ orderFormSubmit.addEventListener("click", function(event) {
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 		<script>
-        $(".testmonial-sliders").owlCarousel({
-				autoplay: true,
-				slideSpeed:1000,
-				items : 3,
-				loop: true,
-				nav:true,
-				navText:['<i class="fa fa-arrow-left"></i>','<i class="fa fa-arrow-right"></i>'],
-				margin: 30,
-				dots: true,
-				rtl: true,
-				responsive:{
-					320:{
-						items:1
-					},
-					767:{
-						items:2
-					},
-					600:{
-						items:2
-					},
-					1000:{
-						items:3
-					}
-				}
-				
-			});
+      $(".testmonial-sliders").owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 5000, // Time between transitions in milliseconds (5 seconds)
+    autoplaySpeed: 1000, // Speed of autoplay transition in milliseconds (1 second)
+    smartSpeed: 1000, // Speed of non-autoplay transitions in milliseconds (1 second)
+    items: 3,
+    loop: true,
+    nav: true,
+    navText: ['<i class="fa fa-arrow-left"></i>', '<i class="fa fa-arrow-right"></i>'],
+    margin: 30,
+    dots: true,
+    rtl: true,
+    responsive: {
+        320: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        767: {
+            items: 2
+        },
+        1000: {
+            items: 3
+        }
+    }
+});
+
 			
 			
 			$(".projects-sliders").owlCarousel({

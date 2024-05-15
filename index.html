@@ -837,20 +837,6 @@ masterpieces that exceed your expectations. Let's discuss your project in-depth 
     </section>
 	
 	
-<script>
-document.getElementById('newOrderForm').addEventListener('click', function() {
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-    var subject = 'Message from ' + name;
-    
-    var mailtoLink = 'https://mail.google.com/mail/?view=cm&fs=1&to=lmtdhananjaya@gmail.com&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
-    
-    window.open(mailtoLink, '_blank');
-});
-</script>
-
-	
 	
 
 <style>
@@ -909,7 +895,6 @@ document.getElementById('newOrderForm').addEventListener('click', function() {
   <div class="loading-spinner"></div>
 </div>
 
-<!--
 <script>
 
 var userName = document.getElementById("name");
@@ -939,7 +924,7 @@ orderFormSubmit.addEventListener("click", function(event) {
     subject: userSubject.value,
   };
 
-  fetch("", {
+  fetch("https://mental-health-backend-one.vercel.app/send-data-thilina", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -967,9 +952,6 @@ orderFormSubmit.addEventListener("click", function(event) {
 
 
 
--->	
-	
-	
 	
 	
 	
