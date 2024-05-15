@@ -8,6 +8,47 @@ function toggleMenu() {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    class Cursor {
+      constructor(options) {
+        this.targets = options.targets || [];
+        this.cursorElement = document.querySelector('[data-cursor]');
+        this.init();
+      }
+  
+     init() {
+    this.targets.forEach(target => {
+      const elements = document.querySelectorAll(target);
+      elements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+          this.cursorElement.classList.add('cursor-hover');
+        });
+        element.addEventListener('mouseleave', () => {
+          this.cursorElement.classList.remove('cursor-hover');
+        });
+      });
+    });
+  
+    document.addEventListener('mousemove', (event) => {
+      this.moveCursor(event);
+    });
+  }
+  
+      moveCursor(event) {
+        const x = event.clientX;
+        const y = event.clientY;
+  
+        this.cursorElement.style.left = `${x}px`;
+        this.cursorElement.style.top = `${y}px`;
+      }
+    }
+  
+    new Cursor({
+      targets: ['a']
+    });
+  });
+  
+  
   
   
   
@@ -42,6 +83,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+const themeButton = document.getElementById("theme-button");
+	
+    const themeButtonsmall = document.getElementById("theme-button-small");
+    const iconTheme = "ri-sun-line";
+    const body = document.querySelector('body');
     const btnColor2 = document.querySelector('.btn-color-2');
     const anchorNav = document.querySelectorAll('a');
     const header = document.getElementById('desktop-nav');
@@ -51,10 +97,89 @@ document.addEventListener('DOMContentLoaded', function() {
     
 	
 	
+
+    //  Active / deactive the theme manually with the button
+    themeButton.addEventListener("click", () => {
+        // Toggle dark mode class on body
+        body.classList.toggle("dark-mode");
+        anchorNav.forEach(anchor => {
+            anchor.classList.toggle("dark-mode-anchor");
+        });
+
+       
+        // Toggle button icon class
+        if (themeButton.classList.contains('ri-moon-line')) {
+            themeButton.classList.remove('ri-moon-line');
+            themeButton.classList.add('ri-sun-line');
+        } else {
+            themeButton.classList.remove('ri-sun-line');
+            themeButton.classList.add('ri-moon-line');
+        }
+
+        // Adjust header background color based on theme
+        if (body.classList.contains('dark-mode')) {
+            header.style.backgroundColor = '#000';
+			
+			
+            btnColor2.style.color = "white";
+            
+        
+        } else {
+            header.style.backgroundColor = '#fff';
+			
+					
+			btnColor2.style.color = "black";
+			
+            myptag.style.color = "#333";
+        }
+    });
+
+   
+ themeButtonsmall.addEventListener("click", () => {
+        // Toggle dark mode class on body
+        body.classList.toggle("dark-mode");
+        anchorNav.forEach(anchor => {
+            anchor.classList.toggle("dark-mode-anchor");
+        });
+
+        if (btnColor2.style.color === "black") {
+            btnColor2.style.color = "white";
+        } else {
+            btnColor2.style.color = "black";
+        }
+		
+
+        // Toggle button icon class
+        if (themeButton.classList.contains('ri-moon-line')) {
+            themeButton.classList.remove('ri-moon-line');
+            themeButton.classList.add('ri-sun-line');
+		
+        } else {
+            themeButton.classList.remove('ri-sun-line');
+            themeButton.classList.add('ri-moon-line');
+        }
+
+        // Adjust header background color based on theme
+        // Adjust header background color based on theme
+        if (body.classList.contains('dark-mode')) {
+            header.style.backgroundColor = '#000';
+          
+            btnColor2.style.color = "white";
+            myptag.style.color = "#ccc";
+			
+        } else {
+            header.style.backgroundColor = '#fff';
+			btnColor2.style.color = "black";
+			
+            myptag.style.color = "#333";
+       
+        }
+    });
+	
 let lastScrollTop = 0;
 const homeSection = document.getElementById('profile'); // Assuming the ID of the home section is 'home'
-const headerHeightNormal = '11.5vh'; // Normal height of the header
-const headerHeightHome = '11.5vh'; // Height of the header when in the home section
+const headerHeightNormal = '9vh'; // Normal height of the header
+const headerHeightHome = '13vh'; // Height of the header when in the home section
 
 const shadowHeader = () => {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -81,7 +206,3 @@ const shadowHeader = () => {
 };
 
 window.addEventListener('scroll', shadowHeader);
-
-
-
-
