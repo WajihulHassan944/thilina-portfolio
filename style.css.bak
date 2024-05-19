@@ -1440,7 +1440,7 @@ section {
 @media only screen and (max-width: 767px){
 
 #companies{
-	margin-top:50px;
+	margin-top:0;
 	height:60vh;
 	
 }
@@ -1452,4 +1452,447 @@ section {
 }
 
 	
+}
+
+
+.contactheading{
+	margin-top:50px;
+}
+@media (max-width: 768px){
+	.form .form-txt h1{
+		margin-top:0;
+		font-size:20px;
+	}
+	#contact{
+		margin-bottom:200px;
+	}
+}
+.loading-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #ffffff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Modal container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+.iconsssWrap{
+	padding:3px;
+	border:3px solid #379f00;
+	border-radius:50%;
+	box-shadow: 0 64px 80px rgba(0, 0, 0, .02), 0 26.7377px 33.4221px rgba(0, 0, 0, .028), 0 14.2952px 17.869px rgba(0, 0, 0, .035), 0 8.01379px 10.0172px rgba(0, 0, 0, .042), 0 4.25607px 5.32008px rgba(0, 0, 0, .05), 0 1.77104px 2.21381px rgba(0, 0, 0, .07);
+cursor:pointer;
+}
+
+.upworkIconWrap{
+cursor:pointer;
+	width:40px;
+	height:40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	padding:3px;
+	border:3px solid #379f00;
+	border-radius:50%;
+	box-shadow: 0 64px 80px rgba(0, 0, 0, .02), 0 26.7377px 33.4221px rgba(0, 0, 0, .028), 0 14.2952px 17.869px rgba(0, 0, 0, .035), 0 8.01379px 10.0172px rgba(0, 0, 0, .042), 0 4.25607px 5.32008px rgba(0, 0, 0, .05), 0 1.77104px 2.21381px rgba(0, 0, 0, .07);
+}
+.upworkIconWrap .upworkicon{
+	width:54px;
+	
+	
+}
+	.iconsss{
+		width:40px;
+		height:40px;
+		color:#fff;
+		border-radius:50%;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	background:#379f00;
+		font-size:20px;
+		transition:1s ease-out;
+	}
+	.iconsss:hover{
+	color:#379f00;
+	background:#fff;
+	}
+	.myAbouts{
+		margin-top:-40px;
+	}
+	.toChangeBackgroundAboutOne:hover{
+		color:#379f00;
+		border:2.5px solid #379f00;
+	}
+	.toChangeBackgroundAboutOne:hover p{
+		color:#379f00;
+	}
+	.toChangeBackgroundAboutOne:hover h3{
+		color:#379f00;
+	}
+	
+	
+	.toChangeBackgroundAboutTwo:hover{
+		color:gold;
+		border:2.5px solid gold;
+	}
+	.toChangeBackgroundAboutTwo:hover p{
+		color:gold;
+	}
+	.toChangeBackgroundAboutTwo:hover h3{
+		color:gold;
+	}
+	
+	
+	
+	
+	.toChangeBackgroundAboutThree:hover{
+		color:#1f57c3;
+		border:2.5px solid #1f57c3;
+	}
+	.toChangeBackgroundAboutThree:hover p{
+		color:#1f57c3;
+	}
+	.toChangeBackgroundAboutThree:hover h3{
+		color:#1f57c3;
+	}
+	
+	
+	
+	
+	
+	
+	.serviceWrapForItems{
+		display:flex;
+		gap:20px;
+		justify-content:center;
+		align-items:center;
+		margin-top:50px;
+		flex-wrap:wrap;
+	}
+	.serviceWrapForItems .service-item .item{
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		flex-direction:column;
+		text-align:center;
+    background-color: #f3f3f3;
+	border-bottom: 5px solid #00a01d;
+	width:300px;
+	height:220px;
+	border-radius: 10px;
+	padding:44px 40px;
+	}
+	.serviceWrapForItems .service-item .item h4{
+	margin:15px 0;	
+	}
+	.wrapi{
+		padding:3px;
+		border:2px solid #00a01d;
+		border-radius:50%;
+	}
+	.serviceWrapForItems .service-item .item  i{
+		color:#fff;
+		background:#00a01d;
+		width:60px;
+		height:60px;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		
+		font-size:23px;
+		border-radius:50%;
+	}
+	
+@media (max-width: 768px){
+	.serviceWrapForItems{
+		gap:20px;
+		margin-top:50px;
+		flex-direction:column;
+	}
+	.serviceWrapForItems .service-item .item{
+		width:270px;
+		padding:20px;
+	 }
+	
+}
+
+
+
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+	
+	background:#fff;
+   }
+/* Basic styles for the preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	background:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.preloader-text {
+    text-align: center;
+}
+
+/* Animation for the text coming into view */
+@keyframes slideAndRotate {
+    from {
+        transform: translate3d(0, 150%, 0) scale3d(1, 1, 1) rotateX(90deg) rotateZ(30deg);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0deg) rotateZ(0deg);
+        opacity: 1;
+    }
+}
+
+/* Animation for the line growing */
+@keyframes fillLine {
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+/* Apply animations to elements */
+.preload-text-top, .preload-text-btm {
+    animation: slideAndRotate 1.5s ease forwards;
+}
+
+/* Fade out the whole preloader */
+@keyframes fadeOutPreloader {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.preloader.hide {
+    animation: fadeOutPreloader 0.5s ease forwards;
+    animation-delay: 3.5s; /* Adjust based on total animation time */
+}
+
+/* Ensure animations play when loaded */
+.display-xl {
+    opacity: 0; /* Set initial state to hidden */
+}
+
+.line {
+    display: block;
+    height: 32px;
+    background-color: #fff; /* Assuming a black line, adjust as needed */
+}
+.line-wrap-inner {
+    width: 100%;
+    height: 5px;
+    background-color: #eee; /* Light grey background */
+    overflow: hidden; /* Ensures the inner fill does not spill over */
+    border-radius: 20px; /* Adding a large radius to create the curve effect */
+	 transform: rotate(80deg);
+	
+}
+
+.line-fill {
+    height: 5px;
+    background-color: #7b57ff; /* The color that 'fills' the line */
+    width: 0%; /* Start with no fill */
+    animation: fillLine 2s ease forwards;
+    animation-delay: 1.5s; /* Starts after text animation */
+    border-radius: 20px; /* Ensure the fill also appears curved */
+	 transform: rotate(80deg);
+}
+
+/* Animation for the line filling */
+@keyframes fillLine {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Rest of the styles remain the same as previously described */
+#curve {
+    animation: draw 2s forwards ease-out;
+    animation-delay: 1.5s; /* adjust based on when you want the animation to start */
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+i{
+	font-size:30px;
+}
+
+
+
+
+
+
+
+
+
+	.testimonials-section{
+		margin-top:200px;  
+		padding-top:50px; 
+		height:70vh; 
+		margin-bottom:70px; 
+	}
+	
+.projects__content__custom{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	width:350px;
+	margin-left:-40px;
+}
+
+
+.projects__content__custom p {
+  font-style: italic;
+  margin: 0 15px 15px 15px;
+  padding: 20px;
+  background: #1f57c3;
+  position: relative;
+  margin-bottom: 35px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px #9ee86f;
+  color:#fff;
+  text-align:center;
+}
+
+.projects__content__custom p::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 20px solid #1f57c3;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  position: absolute;
+  bottom: -20px;
+  left: calc(50% - 20px);
+  
+  
+}
+.projects__content__custom h5{
+	color:#1f57c3;
+	font-weight:400;
+}
+
+
+@media (max-width: 768px){
+	
+	.testimonials-section{
+		margin-top:10px;  
+		padding-top:20px; 
+		height:70vh; 
+		margin-bottom:70px; 
+	}
+	
+.projects__content__custom{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	width:270px;
+	margin-left:0;
+}
+
 }
